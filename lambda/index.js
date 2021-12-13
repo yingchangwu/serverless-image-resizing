@@ -43,6 +43,7 @@ exports.handler = function(event, context, callback) {
         Bucket: BUCKET,
         ContentType: 'image/png',
         Key: key,
+        ACL: "public-read",
       }).promise()
     )
     .then(() => callback(null, {
